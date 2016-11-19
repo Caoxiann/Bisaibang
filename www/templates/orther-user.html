@@ -1,0 +1,76 @@
+<ion-view view-title="个人信息"  >
+   <!--  <ion-nav-buttons side="left" ng-controller="OrtherUserCtrl">
+      <button class="button" ng-click="backView()">
+        返回
+      </button>
+    </ion-nav-buttons> -->
+  <ion-content class="padding" >
+<!--    <div class="list card">
+      <div class="item item-divider">Recent Updates</div>
+      <div class="item item-body">
+        <div>
+          There is a fire in <b>sector 3</b>
+        </div>
+      </div>
+    </div>
+    <div class="list card">
+      <div class="item item-divider">Health</div>
+      <div class="item item-body">
+        <div>
+          You ate an apple today!
+        </div>
+      </div>
+    </div>
+    <div class="list card">
+      <div class="item item-divider">Upcoming</div>
+      <div class="item item-body">
+        <div>
+          You have <b>29</b> meetings on your calendar tomorrow.
+        </div>
+      </div>
+    </div>  
+	
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">密码</span>
+			<input type="password"  placeholder="" ng-model="UserMessage.password" >
+		</label>
+	-->
+
+	<div class=" list card" >
+		<label style="border-style: none;" class="item item-input ">
+			<span class="input-label">名字</span>
+			<input type="text"  placeholder="他还没写呢-。-" readonly="readonly" style="background-color:#ffffff;" ng-model="UserMessage.true_name">
+		</label>
+		<label style="border-style: none;"  class="item item-input ">
+			<span class="input-label">QQ</span>
+			<input type="text"  placeholder="他还没写呢-。-" readonly="readonly" style="background-color:#ffffff;" ng-model="UserMessage.qq_number">
+		</label>
+		<label style="border-style: none;"  class="item item-input ">
+			<span class="input-label">特长</span>
+			<input type="text"  placeholder="" readonly="readonly" style="background-color:#ffffff;" ng-model="UserMessage.ability">
+		</label>
+		<label style="border-style: none;"  class="item item-input ">
+			<span class="input-label">性别</span>
+			<input type="text"  placeholder="" readonly="readonly" style="background-color:#ffffff;" ng-model="gender">
+		</label>
+		<!--<label style="border-style: none;"  class="item item-input ">
+			<span class="input-label">特长</span>
+			<input type="text"  placeholder="他还没写呢-。-" readonly="readonly" style="background-color:#ffffff;" ng-model="UserMessage.ability">
+		</label> -->
+
+		<!-- <ion-radio ng-disabled="true" ng-model="UserMessage.gender" ng-value="1" icon="ion-female" style="float:left;width:33%;">女</ion-radio>
+		<ion-radio ng-disabled="true" ng-model="UserMessage.gender" ng-value="2" icon="ion-male" style="float:left;width:33%;">男</ion-radio>
+		<ion-radio ng-disabled="true" ng-model="UserMessage.gender" ng-value="3" icon="ion-transgender" style="float:left;width:34%;">？</ion-radio>-->
+		
+		<div >
+			<p></p>
+		</div>
+		<!--  <div ng-click="saygood()" >
+			&nbsp <button class="button icon-left ion-thumbsup button-light" style="border:2px solid;border-radius:25px;-moz-border-radius:25px;" >牛逼！</button>
+		</div>
+		<div >
+			<p></p>
+		</div> -->
+	</div>
+  </ion-content>
+</ion-view>

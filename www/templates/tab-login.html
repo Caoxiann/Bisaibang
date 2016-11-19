@@ -1,0 +1,122 @@
+<ion-view view-title="登陆" >
+  <ion-content scroll="false">
+<!--    <div class="list card">
+      <div class="item item-divider">Recent Updates</div>
+      <div class="item item-body">
+        <div>
+          There is a fire in <b>sector 3</b>
+        </div>
+      </div>
+    </div>
+    <div class="list card">
+      <div class="item item-divider">Health</div>
+      <div class="item item-body">
+        <div>
+          You ate an apple today!
+        </div>
+      </div>
+    </div>
+    <div class="list card">
+      <div class="item item-divider">Upcoming</div>
+      <div class="item item-body">
+        <div>
+          You have <b>29</b> meetings on your calendar tomorrow.
+        </div>
+      </div>
+    </div>  -->
+	<ion-slide-box on-slide-changed="slideHasChanged($index)" >
+		<ion-slide ng-controller="LoginCtrl">
+			<div class="box white">
+				<div class="list">
+					<label class="item item-input item-floating-label">
+						<!-- <span class="input-label">账号</span> -->
+						<input type="text" ng-model="loginBox.username" placeholder="账号">
+					</label>
+					<label class="item item-input item-floating-label">
+						<!-- <span class="input-label">密码</span> -->
+						<input type="password" ng-model="loginBox.password" placeholder="密码">
+					</label>
+				</div>
+			</div>
+			<div class="padding">
+				<button class="button button-block button-positive" ng-click="loginInLogin()">登陆</button>
+			</div>
+			<div class="padding">
+				<button class="button button-block  button-clear button-positive" ng-click="regInLogin()">
+					注册新用户 
+				</button>
+			</div>
+		</ion-slide>
+		<ion-slide ng-controller="LoginCtrl">
+			<div class="box white ">
+				<div class="list">
+					<label class="item item-input item-floating-label">
+						<!-- <span class="input-label">账号</span> -->
+						<input type="text" ng-model="reg.usernameInReg" placeholder="账号">
+					</label>
+					<label class="item item-input item-floating-label">
+						<!-- <span class="input-label">密码</span> -->
+						<input type="password" ng-model="reg.passwordInReg" placeholder="密码">
+					</label>
+					<label class="item item-input item-floating-label">
+						<input type="text" ng-model="reg.qq_numberInReg" placeholder="qq">
+					</label>
+					<!-- <label class="item item-input item-floating-label">
+						<input type="text" ng-model="reg.phone_number" placeholder="手机">
+					</label>  -->
+					<label class="item item-input item-floating-label">
+						<input type="text" ng-model="reg.true_nameInReg" placeholder="真名">
+					</label>
+					<ion-radio ng-model="gender" ng-value="'1'" icon="ion-female" style="float:left;width:33%;">女</ion-radio>
+					<ion-radio ng-model="gender" ng-value="'2'" icon="ion-male" style="float:left;width:33%;">男</ion-radio>
+					<ion-radio ng-model="gender" ng-value="'3'" icon="ion-transgender" style="float:left;width:34%;">？</ion-radio>
+					<div >
+					&nbsp 
+					</div>	
+					
+					
+					<!-- 
+					<div>
+						<button class=" button button-icon icon ion-female " style="float:left;width:33%;"></button>
+					</div>
+					<div>
+						<button class=" button button-icon icon ion-male " style="float:left;width:33%;"></button>
+					</div>
+					<div>
+						<button class=" button button-icon icon ion-transgender " style="float:left;width:33%;"></button>
+					</div>
+					 -->
+					<!-- <label class="item item-input item-floating-label">
+						<input type="text" ng-model="reg.ability" placeholder="特长">
+					</label> -->
+					<!-- <label class="item item-input item-floating-label">
+						<input type="text" ng-model="reg.school" placeholder="学校">
+					</label> 
+				</div>
+			</div>-->
+			<div class="padding">
+				<button class="button button-block button-positive" ng-click="regInReg()">注册</button>
+			</div>
+			<div class="padding">
+				<button class="button button-block  button-clear button-positive" ng-click="loginInReg()">
+					登陆 
+				</button>
+			</div>			
+			<!-- <p>&nbsp </p>
+			<p>&nbsp </p>
+			<p>&nbsp </p>
+			<p>&nbsp </p>
+			<p>&nbsp </p>
+			<p>&nbsp </p>
+			<p>&nbsp </p>
+			<p>&nbsp </p>
+			<p>&nbsp </p>
+			<p>&nbsp </p>
+			<p>&nbsp </p>
+			<p>&nbsp </p>  -->
+		</div>
+		</ion-slide>
+	</ion-slide-box> 
+
+  </ion-content>
+</ion-view>

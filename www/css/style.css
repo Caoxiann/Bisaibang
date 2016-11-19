@@ -1,0 +1,12 @@
+.myRecuitCard {margin : 10px 5px 10px 5px;}
+.textMargin {margin : 10px 15px 10px 15px;}
+.button-padding {padding : 0px 5px 0px 5px;}
+.slider-pager .slider-pager-page {display:none;}
+a:link {text-decoration: none;}
+.detail{margin-top: 20px ;margin-bottom: 20px ;}
+.comment{margin-top: 10px ;margin-bottom: 10px;text-overflow:clip !important;white-space:pre-wrap !important;}
+.item-select select{right: auto;padding: 13px 45px 15px 0px;direction: ltr;}
+#searchBar { margin-top: 10px ;margin-bottom: 1px ; }
+ion-view {font-family: "黑体"; }
+body {font-family: "黑体"; }
+div {font-family: "黑体"; }

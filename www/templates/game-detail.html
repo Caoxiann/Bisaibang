@@ -1,0 +1,65 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="比赛">
+    <ion-nav-buttons side="right" >
+      <button class="button button-clear button-light"  ng-show="modifyButtonShow" ng-click="toRecruitModify()" >
+        &nbsp 修改 &nbsp 
+      </button>
+    </ion-nav-buttons>
+	<ion-content class="padding" >
+    <!-- <img ng-src="{{chat.face}}" style="width: 64px; height: 64px"> -->
+	<div class="card" style="margin-top:0px;">
+		<ion-list >
+			<ion-item>
+				<h1 style="text-overflow:clip;white-space:pre-wrap ;"><small><b>{{game.title}}</b><small></h1>
+				<h5>
+				  {{game.type}}
+				</h5>
+				<div class="detail" >
+					<p style="white-space:pre-wrap ;">{{game.detail}}</p>
+				</div>
+				<div>
+					<div style="float:left">
+						<p>
+						  <span>比赛QQ群:</span>{{game.about_qq_group}}
+						</p>
+						<p>
+						  主办方:{{game.sponsor}}
+						</p>
+						<p>
+						  {{game.time}}
+						</p>
+					</div>
+					<div class="buttons " ng-click="saygood()" style="float:right">
+						<button class="button button-icon icon ion-thumbsup" ></button><!-- <div style="display: inline-block; vertical-align: middle;"></div>-->
+						<p>{{number}}人觉得赞</p>
+					</div>
+				</div>
+				<!-- div class="buttons " ng-click="comment()" >
+					<button class="button button-icon icon ion-thumbsup" style="width=200%;"></button>
+				</div> -->
+			</ion-item>
+			<ion-item class="item" style="border:0px;">
+				<div  ng-repeat="reply  in game.replies " type="item-text-wrap" >
+					<p class="comment"><span ><a  style="color:#295998;" href="#/tab/games/user/{{reply.author_username}}">{{reply.author_true_name}}</a></span>:{{reply.detail}}</p>
+				</div>
+			</ion-item>
+		</ion-list >
+	</div>
+
+
+
+	</ion-content>
+  	<ion-footer-bar class=" item-input-inset bar-light footer-item-input-insert">
+		<label class="item-input-wrapper" style="background:#FFFFFF;border:2px solid; border-color: #F8F8F8;">
+			<input type="text" ng-model="commentThings" placeholder="吐槽点什么吧~">
+		</label>
+		<div class="buttons " ng-click="comment()" >
+			<button class="button button-icon icon ion-chatbox-working" style="width=200%;"></button>
+		</div>
+	</ion-footer-bar>
+</ion-view>

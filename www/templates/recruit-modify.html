@@ -1,0 +1,59 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="修改信息">
+  <ion-content class="padding" ng-controller="RecruitModifyCtrl" >
+    <!-- <img ng-src="{{chat.face}}" style="width: 64px; height: 64px">  -->
+	<div class="list card">
+		<div class="item">
+			<!--  <h1><small><b>发布</b><small></h1> -->
+			<label class="item item-input">
+				<input type="text"  placeholder="标题" ng-model="Recruit.title"></input>
+			</label>
+			<!-- <label class="item item-input item-stacked-label">
+				<span class="input-label">比赛类型</span>
+				<input type="text"  placeholder="" ng-model="Recruit.type"></input>
+			</label> -->
+			<label class="item item-input item-select" >
+				<div class="input-label ng-hide" style="color:#AAAAAA;float:left;" ng-show="recruitSelelctPlaceHolder">
+				  比赛类型
+				</div>
+				<select  ng-model="Recruit.type" ng-change="changePlaceHolder()">
+					<option value=""></option>
+					<option>电子设计</option>
+					<option>数学建模</option>
+					<option>编程算法</option>
+					<option>APP开发</option>
+					<option>机器人比赛</option>
+					<option>创新创业基金项目</option>
+					<option>商业创业类</option>
+					<option>设计类比赛</option>
+					<option>音乐类比赛</option>
+					<option>体育类比赛</option>
+					<option>美术影视</option>
+				</select>
+				<div class="input-label" style="width:1%;"> &nbsp </div>
+			</label>
+
+			<label class="item item-input">
+				<input type="text"  placeholder="qq" ng-model="Recruit.author_qq_number"></input>
+			</label>
+			<label class="item item-input">
+				<textarea placeholder="详情" ng-model="Recruit.detail"></textarea>
+			</label>
+		</div>
+	</div>
+	<button class="button button-block button-positive" ng-click="modify()">
+		修改
+	</button>
+	<button class="button button-block button-assertive" ng-click="del()">
+		删除
+	</button>
+  </ion-content>
+  <!--<ion-footer-bar class="bar-positive" ng-click="output()" >
+	<p class="title">发布</p>
+   </ion-footer-bar> -->
+</ion-view>

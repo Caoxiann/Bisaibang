@@ -1,0 +1,24 @@
+ <!-- <ion-nav-bar></ion-nav-bar>  style="color: #387ef5;"-->
+<ion-view view-title="反馈建议">
+	<ion-content>
+		<ion-refresher
+			pulling-text="刷新♪～"
+			on-refresh="doRefresh()">
+		</ion-refresher>
+		<ion-list>
+			<ion-item class="item" style="border:0px;">
+				<div  ng-repeat="comment  in comments " type="item-text-wrap" >
+					<p class="comment"><span ><a style="color:#295998;" href="#/tab/recruits/user/{{reply.author_username}}">{{comment.author_true_name}}</a></span>:{{comment.detail}}</p>
+				</div>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+  	<ion-footer-bar class=" item-input-inset bar-light footer-item-input-insert">
+		<label class="item-input-wrapper" style="background:#FFFFFF;border:2px solid; border-color: #F8F8F8;">
+			<input type="text" ng-model="commentThings" placeholder="吐槽点什么吧~">
+		</label>
+		<div class="buttons " ng-click="outputComment()" >
+			<button class="button button-icon icon ion-chatbox-working" style="width=200%;"></button>
+		</div>
+	</ion-footer-bar>
+</ion-view>
